@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-black">
+    <div class="container flex">
+      <div class="up flex">
+        <div class="left">
+          <div class="home bg-grey rounded m-1 p-1">
+            <div class="logo flex">
+              <img class="invert" src="svg/logo.svg" alt="" />
+              <img class="close invert" src="svg/close.svg" alt="" />
+            </div>
+            <ul>
+              <li><img class="invert" src="svg/home.svg" alt="Home" />Home</li>
+              <li>
+                <img class="invert" src="svg/search.svg" alt="Search" />Search
+              </li>
+            </ul>
+          </div>
+          <div class="library bg-grey rounded m-1 p-1">
+            <div class="heading">
+              <img class="invert" src="svg/library.svg" alt="" />
+              Your Library
+            </div>
+            <div class="lib-songs">
+              <ul></ul>
+            </div>
+            <div class="footer">
+              <div>
+                <a href="https://www.spotify.com/in-en/legal/">
+                  <span>Legal</span>
+                </a>
+              </div>
+              <div>
+                <a href="https://www.spotify.com/in-en/safetyandprivacy/">
+                  <span>Safety & Privacy Center</span>
+                </a>
+              </div>
+              <div>
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/">
+                  <span>Privacy Policy</span>
+                </a>
+              </div>
+              <div>
+                <a href="https://www.spotify.com/in-en/legal/cookies-policy/">
+                  <span>Cookies</span>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"
+                >
+                  <span>About Ads</span>
+                </a>
+              </div>
+              <div>
+                <a href="https://www.spotify.com/in-en/accessibility/">
+                  <span>Accessibility</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right bg-grey rounded m-1">
+          <div class="header rounded-top p-1">
+            <div class="nav flex">
+              <img class="invert hamburger" src="svg/hamburger.svg" alt="" />
+              <img src="svg/left-arrow.svg" class="fow-bac" alt="" />
+              <img src="svg/right-arrow.svg" class="fow-bac" alt="" />
+            </div>
+            <div class="buttons flex">
+              <button>Sign Up</button>
+              <button>Log in</button>
+            </div>
+          </div>
+          <div class="playlist">
+            <h1>Spotify Playlists</h1>
+            <div class="card-container">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="playbar">
+        <div class="song-info"></div>
+        <div class="song-btns">
+          <!-- <img class="hov invert" src="svg/shuffle.svg" alt=""/> -->
+          <img id="previous" class="hov invert" src="svg/previous.svg" alt="" />
+          <img id="play" class="hov invert" src="svg/play.svg" alt="" />
+          <img id="next" class="hov invert" src="svg/next.svg" alt="" />
+          <!-- <img class="hov invert" src="svg/repeat.svg" alt=""/> -->
+        </div>
+        <div class="song-time"></div>
+        <div class="pseudo-seek"></div>
+        <div class="seekbar">
+          <div class="seek-fill"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="song-duration"></div>
+        <div class="volume">
+          <img id="vol" class="invert" src="svg/volume.svg" alt="" />
+        </div>
+          <div class="pseudo-vol"></div>
+          <div class="seek-vol">
+            <div class="vol-ctrl"></div>
+            <div class="seek-vol-fill"></div>
+          </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
