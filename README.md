@@ -1,2 +1,2 @@
-Spotify Clone made using HTML, CSS and JavaScript
+## Spotify Clone made using HTML, CSS and JavaScript
 
