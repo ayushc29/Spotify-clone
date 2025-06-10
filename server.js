@@ -7,15 +7,12 @@ app.use(cors({
   origin: '*'
 }));
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use('/songs', express.static(path.join(__dirname, 'songs')));
 
-app.get('/songs/:folder/info.json', (req, res) => {
-  const folder = req.params.folder;
-  res.sendFile(path.join(__dirname, 'songs', folder, 'info.json'));
-});
-
-app.get('/', (req, res) => {
-  res.send('Server is running!');
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 module.exports = app;
