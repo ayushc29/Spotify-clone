@@ -17,7 +17,8 @@ function secToMinSec(seconds) {
 
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`http://127.0.0.1:3000/${folder}/`);
+  // Changed fetch URL to relative path
+  let a = await fetch(`/${folder}/`);
   let response = await a.text();
 
   let div = document.createElement("div");
@@ -81,7 +82,8 @@ const playMusic = (track, pause = false) => {
 };
 
 async function displayAlbums() {
-  let a = await fetch(`http://127.0.0.1:3000/songs/`);
+  // Changed fetch URL to relative path
+  let a = await fetch(`/songs/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -97,8 +99,9 @@ async function displayAlbums() {
       let folder = e.href.split("/").slice(-2)[0];
 
       // get metadata of the folder
+      // Changed fetch URL to relative path
       let a = await fetch(
-        `http://127.0.0.1:3000/songs/${folder}/info.json`
+        `/songs/${folder}/info.json`
       );
       let response = await a.json();
 
@@ -118,7 +121,7 @@ async function displayAlbums() {
   // load playlist when card is clicked
   Array.from(document.getElementsByClassName("card")).forEach((e) => {
     e.addEventListener("click", async (item) => {
-      console.log(item.currentTarget.dataset.folder)
+      console.log(item.currentTarget.dataset.folder);
       songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`);
       playMusic(songs[0]);
     });
