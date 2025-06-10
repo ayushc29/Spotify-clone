@@ -17,7 +17,7 @@ function secToMinSec(seconds) {
 
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`http://127.0.0.1:3000/Spotify_clone/${folder}/`);
+  let a = await fetch(`http://127.0.0.1:3000/${folder}/`);
   let response = await a.text();
 
   let div = document.createElement("div");
@@ -81,7 +81,7 @@ const playMusic = (track, pause = false) => {
 };
 
 async function displayAlbums() {
-  let a = await fetch(`http://127.0.0.1:3000/Spotify_clone/songs/`);
+  let a = await fetch(`http://127.0.0.1:3000/songs/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -98,7 +98,7 @@ async function displayAlbums() {
 
       // get metadata of the folder
       let a = await fetch(
-        `http://127.0.0.1:3000/Spotify_clone/songs/${folder}/info.json`
+        `http://127.0.0.1:3000/songs/${folder}/info.json`
       );
       let response = await a.json();
 
